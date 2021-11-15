@@ -197,7 +197,7 @@ public class Libros {
             pstmt.setString(4, libro.getEditorial());
             pstmt.setInt(5, libro.getPaginas());
             pstmt.setInt(6, libro.getCopias());
-            rs = pstmt.executeQuery();
+            pstmt.executeUpdate();
             System.out.println("Libro added correctamente");
         } catch (SQLException e) {
             System.out.println(e.getCause());
